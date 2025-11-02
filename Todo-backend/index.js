@@ -13,10 +13,18 @@ import cors from "cors";
 //!Create an express app
 const app = express();
 
-app.use(cors({
-  origin: ["http://localhost:5173","https://690779d0b44fa8fc0cd906bd--todo-12-frontend.netlify.app/"], // your frontend URL
-  credentials: true,
-}));
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",                  // local dev
+      "https://todo-12-frontend.netlify.app"    // ⚠️ final deployed Netlify domain
+    ],
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
+
 
 app.use("/uploads", express.static("uploads"));
 
