@@ -7,6 +7,9 @@ import { globalErrorHandler, notFoundErrorHandler } from "./middlewares/globalEr
 import taskRouters from "./routes/todoRoutes/todo.routes.js";
 import cors from "cors";
 
+// Load environment variables FIRST
+dotenv.config();
+
 
 
 
