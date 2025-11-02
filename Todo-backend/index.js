@@ -30,6 +30,13 @@ connectDB();
 //!setup middleware
 app.use(express.json());
 
+app.get('/',(req,res,)=>{
+  res.send({
+    success:true,
+    error:false
+  })
+})
+
 
 //?setup the Router
 app.use("/api/v1/users", usersRouters);
