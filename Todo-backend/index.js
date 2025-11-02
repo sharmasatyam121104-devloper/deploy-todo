@@ -14,7 +14,7 @@ import cors from "cors";
 const app = express();
 
 app.use(cors({
-  origin: "http://localhost:5173", // your frontend URL
+  origin: ["http://localhost:5173","https://690779d0b44fa8fc0cd906bd--todo-12-frontend.netlify.app/"], // your frontend URL
   credentials: true,
 }));
 
